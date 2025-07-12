@@ -85,7 +85,7 @@ const tocSections = await getTOCSections(currentPostId)
     <div class="col-start-2">
       <Breadcrumbs
         items={[
-          { href: '/blog', label: 'blog', icon: 'lucide:library-big' },
+          { href: '/blog', label: 'Blog', icon: 'lucide:library-big' },
           ...(isCurrentSubpost && parentPost
             ? [
                 {
@@ -238,7 +238,6 @@ const tocSections = await getTOCSections(currentPostId)
               ))
           }
         </div>
-        
       </div>
 
       <PostNavigation
@@ -253,7 +252,6 @@ const tocSections = await getTOCSections(currentPostId)
         <TOCSidebar sections={tocSections} currentPostId={currentPostId} />
       )
     }
-    
 
     <article class="prose col-start-2 max-w-none">
       <Content />
@@ -269,15 +267,14 @@ const tocSections = await getTOCSections(currentPostId)
         />
       )
     }
-    
 
     <PostNavigation
       newerPost={navigation.newer}
       olderPost={navigation.older}
       parentPost={isCurrentSubpost ? navigation.parent : undefined}
     />
-
   </section>
+
   <Button
     variant="outline"
     size="icon"
@@ -291,25 +288,6 @@ const tocSections = await getTOCSections(currentPostId)
       class="mx-auto size-4 transition-all group-hover:-translate-y-0.5"
     />
   </Button>
-  <section class="grid grid-cols-[minmax(0px,1fr)_min(calc(var(--breakpoint-md)-2rem),100%)_minmax(0px,1fr)] gap-y-6">
-    <section class="col-start-2 flex flex-col gap-y-6 text-center">
-      <script src="https://giscus.app/client.js"
-        data-repo="personwholovesflowers/portf"
-        data-repo-id="R_kgDOPK8wjg"
-        data-category="General"
-        data-category-id="DIC_kwDOPK8wjs4Cs1Bx"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-      </script>
-    </section>
-  </section>
 
   <script>
     document.addEventListener('astro:page-load', () => {

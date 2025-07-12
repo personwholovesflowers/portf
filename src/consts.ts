@@ -37,5 +37,4 @@ export const ICON_MAP: IconMap = {
   Twitter: 'lucide:twitter',
   Email: 'lucide:mail',
   RSS: 'lucide:rss',
-  Discord: 'lucide:circle-user',
 }

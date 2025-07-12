@@ -20,7 +20,6 @@ const socialLinks: SocialLink[] = [
   author.data.github && { href: author.data.github, label: 'GitHub' },
   author.data.twitter && { href: author.data.twitter, label: 'Twitter' },
   author.data.linkedin && { href: author.data.linkedin, label: 'LinkedIn' },
-  author.data.discord && { href: author.data.discord, label: 'Discord' },
   author.data.mail && { href: `mailto:${author.data.mail}`, label: 'Email' },
 ].filter(Boolean) as SocialLink[]
 ---
@@ -48,7 +47,7 @@ const socialLinks: SocialLink[] = [
     <div class="flex grow flex-col justify-between gap-y-4">
       <div>
         <div class="flex flex-wrap items-center gap-x-2">
-          <h3 class="text-lg font-semibold">{name}</h3>
+          <h3 class="text-lg font-medium">{name}</h3>
           {
             pronouns && (
               <span class="text-muted-foreground text-sm">({pronouns})</span>
