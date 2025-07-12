@@ -1,0 +1,69 @@
+---
+title: 'arch experience'
+description: ''
+date: 2025-07-11
+tags: ['arch', 'linux']
+image: './img.jpg'
+authors: ['polar']
+draft: false
+---
+
+import Callout from '@/components/Callout.astro'
+
+<Callout variant="note">
+this was the worst experience of me using arch
+
+so if u wanna install it, u need to have brain, and u need to be smart, very smart
+
+</Callout>
+  
+after i broked linux mint, i was interested to install arch, cuz all my previous times, when i installed arch, it was broken on nvidia drivers installation.
+
+i found some 20 min youtube tutorial from indian man.
+
+i followed all steps, installed gnome, and after rebooting, black screen.
+
+i had blackscreen after installing arch like 3 or 4 times, and all this times, i ended ragequitting.
+
+this time, i was ready for it.
+
+<Callout title='by chatgpt' variant="solution">
+chatgpt said that i didnt configure mkinitcpio
+
+fix:
+
+```sh
+sudo pacman -S nvidia nvidia-utils nvidia-settings
+sudo mkinitcpio -P
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+this 3 lines of cmd prompt, fixed all problems.
+
+and i first time installed nvidia drivers on arch correct way.
+
+</Callout>
+
+after complete intall of arch, i started make thinks.
+
+all was okay - **UNTIL** i installed steam.
+
+first of all, steam didnt wanted to see my ssd's.
+
+steam appears to be seeing hard drives ONLY if drives had system mount points.
+
+somehow, i fixed it, and **ANOTHER** problem appeared.
+
+if i wanna run game, that doesnt nativly supports linux through proton, it didnt even started.
+
+i tried to fix it, by running it through [gnome "Bottles"](https://github.com/bottlesdevs/Bottles), [heroic launcher](https://heroicgameslauncher.com/), nothing.
+
+and after many **DAYS**, of trying and fixing, i simply deleted arch.
+
+i was really tired of doing this shit.
+
+<Callout variant="tip">
+  dont dualboot arch, if u have all games downloaded on windows.
+</Callout>
+
+next time i'll try to install nixos.
